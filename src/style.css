@@ -1,0 +1,111 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d946ef #1e293b;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #d946ef, #0ea5e9);
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .btn-cyber {
+    @apply relative px-8 py-4 bg-gradient-to-r from-accent-500 to-primary-500 text-white font-bold rounded-none 
+           transform transition-all duration-300 hover:scale-105 hover:shadow-2xl
+           before:absolute before:inset-0 before:bg-gradient-to-r before:from-accent-600 before:to-primary-600 
+           before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100
+           after:absolute after:inset-0 after:border-2 after:border-accent-400 after:opacity-0 
+           after:transition-all after:duration-300 hover:after:opacity-100 hover:after:scale-110;
+  }
+  
+  .btn-ghost {
+    @apply relative px-8 py-4 bg-transparent border-2 border-accent-400 text-accent-400 font-bold
+           transition-all duration-300 hover:bg-accent-400 hover:text-dark-900 hover:shadow-lg hover:shadow-accent-400/25;
+  }
+  
+  .section-spacing {
+    @apply py-32 px-6 lg:px-12;
+  }
+  
+  .container-fluid {
+    @apply max-w-[1600px] mx-auto;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 
+           hover:bg-white/10 hover:border-white/20 transition-all duration-500;
+  }
+  
+  .neon-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent-400 via-primary-400 to-cyber-400;
+  }
+  
+  .cyber-border {
+    @apply relative before:absolute before:inset-0 before:border-2 before:border-accent-400/30 
+           before:rounded-3xl before:animate-pulse-slow;
+  }
+
+  .floating-element {
+    @apply animate-float;
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(217, 70, 239, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(217, 70, 239, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .holographic {
+    background: linear-gradient(45deg, 
+      rgba(217, 70, 239, 0.1) 0%,
+      rgba(14, 165, 233, 0.1) 25%,
+      rgba(34, 197, 94, 0.1) 50%,
+      rgba(14, 165, 233, 0.1) 75%,
+      rgba(217, 70, 239, 0.1) 100%);
+    background-size: 400% 400%;
+    animation: holographic 8s ease-in-out infinite;
+  }
+
+  @keyframes holographic {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 20px currentColor;
+  }
+  
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+  
+  .clip-arrow {
+    clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 50%, calc(100% - 40px) 100%, 0 100%);
+  }
+}
