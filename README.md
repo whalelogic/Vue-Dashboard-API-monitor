@@ -1,5 +1,13 @@
-# Vue 3 + TypeScript + Vite
+# API Dashboard Template
+<p>
+  Use this beautiful Dashboard UI as inspiration for building custom workspaces that handles HTTP methods.
+</p>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+<h5>Bring your own Data and use for free!
+  <br>
+  <br>
+  👍 Contact me for specific use-cases.</h5>
+
+![image](https://github.com/user-attachments/assets/664915ea-58a6-42b6-9ef6-f19aca363b4d)
+
