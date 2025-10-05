@@ -4,7 +4,7 @@
 </p>
 
 
-<h5>Bring your own Data and use for free!
+<h5>Bring your own Data
   <br>
   <br>
   👍 Contact me for specific use-cases.</h5>
